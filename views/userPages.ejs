@@ -1,0 +1,15 @@
+  <h3>Pages written by <%= user.name %></h3>
+  <hr>
+  <form method="GET" action="/wiki/search">
+    <input type="text" name="search" />
+    <button type="submit">Search</button>
+  </form>
+  <hr>
+  <ul class="list-unstyled">
+    <ul>
+      <% pages.map((page) => { %>
+        <h1><%= page.dataValues.title %></h1>
+        <div><%= page.dataValues.content %></div>
+      <% }) %>
+    </ul>
+  </ul>

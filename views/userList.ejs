@@ -1,0 +1,10 @@
+  <h3>Users</h3>
+  <hr>
+  <ul class="list-unstyled">
+    <ul>
+      <% users.map((user) => { %>
+        <h1><%= user.dataValues.name %></h1>
+        <div><%= user.dataValues.email %></div>
+      <% }) %>
+    </ul>
+  </ul>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <%- include('includes/head'); -%>
+    <body>
+      <%- include('includes/header'); -%>
+      <div class="container content">
+        <% pages.map((page) => { %>
+          <h1><%= page.dataValues.title %></h1>
+          <div><%= page.dataValues.content %></div>
+        <% }) %>
+      </div>
+      <hr/>
+      <%- include('includes/footer'); -%>
+    </body>
+  </html>
